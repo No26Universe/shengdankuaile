@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 圣诞节快乐 </title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/bgm.css">
+</head>
+<body>
+    <div id="login-box">
+			<h1>Login</h1>
+			<div class ="form">
+                <form action="/login/register/" method="post">
+                    {% csrf_token %}
+				<div class="item ">
+					<i class="fa fa-user-circle-o"></i>
+					<input type="text" placeholder="User name" name="user">
+				</div>
+				<div class="item ">
+					<i class="fa fa-key"></i>
+					<input type="text" placeholder="Password" name="pwd" >
+				</div>
+                <div class="item ">
+					<i class="fa fa-envelope"></i>
+					<input type="text" placeholder="Email" name="ema" >
+				</div>
+                <div class="it">
+					<input type="submit" value = "注册">
+				</div>
+                </form>
+			</div>
+    </div>
+	<div class="music">
+		<div class="bgm_text"></div>
+		<div class="bgm_btn">
+			<span class="bgm_btn_play"></span>
+			<span class="bgm_btn_stop"></span>
+			<span class="bgm_btn_next"></span>
+			<span class="bgm_btn_rest"></span>
+		</div>
+		<audio value="1" id="bgm" controls></audio>
+	</div>
+	<script src="/static/js/bgm.js"></script>
+</body>
+</html>
